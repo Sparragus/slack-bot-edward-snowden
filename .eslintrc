@@ -7,6 +7,7 @@
   
   "rules": {
     "strict": 0,
-    "quotes": [1, "single", "avoid-escape"]
+    "quotes": [1, "single", "avoid-escape"],
+    "camelcase": [2, {"properties": "never"}]
   }
 }
