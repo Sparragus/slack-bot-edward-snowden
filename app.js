@@ -12,7 +12,6 @@ slack.on('open', function() {
 
 slack.on('message', function (message) {
   // if message is from myself, ignore
-  
 
   var channelGroupOrDM = slack.getChannelGroupOrDMByID(message.channel);
   var text = message.text;
@@ -32,6 +31,26 @@ slack.on('message', function (message) {
 
     // post message to #anonymous
     anonymousChannel.postMessage(response);
+  }
+});
+
+// Warn a user if he/she is typing on channel #anonymous
+slack.on('userTyping', function(user, channel) {
+  // If the user is writing me, it's okay.
+  if (channel.is_im) {
+    return;
+  }
+
+  // If the user is typing on channel #anonymous, warn him/her
+  if (channel.is_channel) {
+    // open a DM channel and send user a message
+    slack.openDM(user.id, function(dmChannel) {
+      var dm = slack.getDMByID(dmChannel.channel.id);
+      var message = "You're directly writing on the #anonymous channel. This will expose you. If you want to send an anonymous message, send it to me and I'll forward it to #anonymous.";
+
+      dm.send(message);
+      dm.close();
+    });
   }
 });
 
