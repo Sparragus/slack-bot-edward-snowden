@@ -1,0 +1,21 @@
+{
+  "name": "slack-bot-anonymous",
+  "version": "0.0.0",
+  "description": "4chan for Slack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "slack",
+    "bot",
+    "anonymous",
+    "4chan"
+  ],
+  "author": "Richard B. Kaufman-Lopez <richardbkaufman@gmail.com> (http://richardkaufman.org/)",
+  "license": "MIT",
+  "dependencies": {
+    "slack-client": "^1.4.0"
+  }
+}

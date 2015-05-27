@@ -1,0 +1,14 @@
+{
+  "name": "slack-bot-anonymous",
+  "description": "",
+  "repository": "https://github.com/Sparragus/slack-bot-anonymous",
+  "logo": "",
+  "keywords": ["node", "slack", "bot", "anonymous", "4chan"],
+  "env": {
+    "SLACK_API_TOKEN": {
+      "description": "This token is required in order to use Slack's API. You get it when you create a bot at https://my.slack.com/services/new/bot",
+      "value": "",
+      "required": true
+    }
+  }
+}
