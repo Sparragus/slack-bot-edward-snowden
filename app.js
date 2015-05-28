@@ -8,6 +8,9 @@ var slack = new Slack(token, autoReconnect, autoMark);
 
 slack.on('open', function() {
   console.log('Welcome to Slack. You are @' + slack.self.name + ' of ' + slack.team.name);
+
+  // Join 4chan channel
+  slack.joinChannel('anonymous');
 });
 
 // TODO: This obviously violates anonimity. Fix later.
