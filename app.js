@@ -124,6 +124,11 @@ var onUserTyping = (function() {
       return;
     }
 
+    //if the user is writing on a channel
+    if (channel.name === 'general') {
+      return;
+    }
+
     // If the user is typing on channel #anonymous, warn him/her
     if (channel.is_channel) {
       // do not warn user if less than N seconds have passed since last warning
