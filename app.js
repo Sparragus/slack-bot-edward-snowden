@@ -9,8 +9,8 @@ var slack = new Slack(token, autoReconnect, autoMark);
 slack.on('open', function() {
   console.log('Welcome to Slack. You are @' + slack.self.name + ' of ' + slack.team.name);
 
-  // Join 4chan channel
-  slack.joinChannel('anonymous');
+  // Join the new /b/
+  slack.joinChannel('random');
 });
 
 // TODO: This obviously violates anonimity. Fix later.
@@ -100,7 +100,7 @@ function onMessageFromDM (message) {
   userActivityOnChannel[message.user] = Date.now();
 
   // post message to #anonymous
-  var anonymousChannel = slack.getChannelByName('anonymous');
+  var anonymousChannel = slack.getChannelByName('random');
   anonymousChannel.postMessage(response);
 }
 
@@ -131,8 +131,8 @@ var onUserTyping = (function() {
 
     // If the user is typing on channel #anonymous, warn him/her
     if (channel.is_channel) {
-      // do not warn user if less than N seconds have passed since last warning
-      var secondsThreshold = 10;
+      // warn users once a day
+      var secondsThreshold = 60 * 60 * 24;
       var timeElapsedInSeconds = 0;
 
       // check if the user is in our records. if so, how much time has passed since the last warning?
@@ -153,7 +153,7 @@ var onUserTyping = (function() {
       // open a DM channel and send user a message
       slack.openDM(user.id, function(dmChannel) {
         var dm = slack.getDMByID(dmChannel.channel.id);
-        var message = "You're directly writing on the #anonymous channel. This will expose you. If you want to send an anonymous message, send it to me and I'll forward it to #anonymous.";
+        var message = "You're directly writing on the #random channel. This will expose you. If you want to send an anonymous message, send it to me and I'll forward it to #random.";
 
         dm.send(message);
         dm.close();
@@ -164,7 +164,7 @@ var onUserTyping = (function() {
   };
 })();
 
-slack.on('userTyping', onUserTyping);
+// slack.on('userTyping', onUserTyping);
 
 slack.on('error', function (error) {
   console.error('Error:', error);
