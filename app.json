@@ -1,9 +1,9 @@
 {
-  "name": "slack-bot-anonymous",
-  "description": "",
-  "repository": "https://github.com/Sparragus/slack-bot-anonymous",
-  "logo": "",
-  "keywords": ["node", "slack", "bot", "anonymous", "4chan"],
+  "name": "slack-bot-edward-snowden",
+  "description": "Let the modern saviour of privacy keep you anon on Slack. Edward Snowden will anonymize all your messages before sending them to #random.",
+  "repository": "https://github.com/Sparragus/slack-bot-edward-snowden",
+  "logo": "http://ledhack.org/content/images/2015/06/edwardsnowden.jpg",
+  "keywords": ["node", "slack", "bot", "anonymous", "privacy", "edward snowden"],
   "env": {
     "SLACK_API_TOKEN": {
       "description": "This token is required in order to use Slack's API. You get it when you create a bot at https://my.slack.com/services/new/bot",

@@ -1,7 +1,7 @@
 {
-  "name": "slack-bot-anonymous",
-  "version": "0.0.0",
-  "description": "4chan for Slack",
+  "name": "slack-bot-edward-snowden",
+  "version": "0.0.1",
+  "description": "Let the modern saviour of privacy keep you anon on Slack. Edward Snowden will anonymize all your messages before sending them to #random.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "slack",
     "bot",
     "anonymous",
-    "4chan"
+    "edward snowden",
   ],
   "author": "Richard B. Kaufman-Lopez <richardbkaufman@gmail.com> (http://richardkaufman.org/)",
   "license": "MIT",
