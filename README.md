@@ -1,4 +1,6 @@
-Let the defender of privacy keep you anonymous on Slack. Edward Snowden will anonymize all your messages before sending them to #random.
+#slack-bot-edward-snowden
+
+Let the Edward Snowden keep you anonymous on Slack. [slack-bot-edward-snowden](https://github.com/Sparragus/slack-bot-edward-snowden) will anonymize all your messages before sending them to #random.
 
 ## Installation
 Before we deploy this app to [Heroku](https://heroku.com) we need to create and configure the bot on Slack.
@@ -17,7 +19,7 @@ After creating it, take note of the API Token. You'll need it later. All other s
 
 Use that button to deploy this app to Heroku. Before you deploy the app, add the API Token for the config variable. Also, give your app a name.
 
-![API Token Config Var](http://ledhack.org/content/images/2015/06/Screen-Shot-2015-06-05-at-12-53-48-PM.png)
+![API Token Config Var](http://ledhack.org/content/images/2015/06/Screen-Shot-2015-06-05-at-2-12-01-PM.png)
 
-### Use it!
-When Heroku finishes installing the app, head over to your team's Slack chat. You'll notice Edward Snowden as a user on the sidebar. Send him a direct message, and see it on #random. Anonymized.
+### Chat anonymously!
+When Heroku finishes installing the app, head over to your team's Slack chat. You'll notice Edward Snowden as a user on the sidebar. Send him a direct message, and see it on #random.
