@@ -1,6 +1,6 @@
 #slack-bot-edward-snowden
 
-Let the Edward Snowden keep you anonymous on Slack. [slack-bot-edward-snowden](https://github.com/Sparragus/slack-bot-edward-snowden) will anonymize all your messages before sending them to #random.
+Let the Edward Snowden keep you anonymous on Slack. [slack-bot-edward-snowden](http://ledhack.org/slack-bot-edward-snowden/) will anonymize all your messages before sending them to #random.
 
 ## Installation
 Before we deploy this app to [Heroku](https://heroku.com) we need to create and configure the bot on Slack.
