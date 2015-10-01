@@ -1,7 +1,7 @@
-var Slack = require('slack-icfj');
+var Slack = require('slack-client');
 var http = require('http');
 
-var token = process.env.xoxb-11677818262-aKjJhqE7k3drnIcIcySBbqnd;
+var token = process.env.SLACK_API_TOKEN;
 var autoReconnect = true;
 var autoMark = true;
 
